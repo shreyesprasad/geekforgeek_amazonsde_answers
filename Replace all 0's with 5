@@ -1,0 +1,20 @@
+#include <stack>
+/*you are required to complete this method*/
+int convertFive(int n) 
+{ 
+int j,num=0; 
+stack<int>s; while(n>0) 
+{ 
+j=n%10; 
+if(j==0) 
+s.push(5); 
+else 
+s.push(j); 
+n=n/10; 
+}
+while(!s.empty()) 
+{ num=num*10+s.top();
+s.pop(); 
+} 
+return num; 
+}
